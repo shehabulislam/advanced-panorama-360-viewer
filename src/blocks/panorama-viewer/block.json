@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "adv-pano-360/panorama-viewer",
+    "version": "1.0.0",
+    "title": "Advanced 360 Panorama Viewer",
+    "category": "media",
+    "icon": "format-image",
+    "description": "Display a 360-degree panorama image or video.",
+    "supports": {
+        "html": false
+    },
+    "textdomain": "adv-pano-360",
+    "editorScript": "file:./../panorama-viewer.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "attributes": {
+        "mediaUrl": {
+            "type": "string"
+        },
+        "showControls": {
+            "type": "boolean",
+            "default": true
+        },
+        "customControls": {
+            "type": "string"
+        },
+        "isVirtualTour": {
+            "type": "boolean",
+            "default": false
+        },
+        "title": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        }
+    }
+}
