@@ -45,7 +45,15 @@
         },
         "controls": {
             "type": "object",
-            "default": {}
+            "default": {
+                "moveUp": false,
+                "moveRight": false,
+                "moveDown": false,
+                "moveLeft": false,
+                "zoomIn": false,
+                "zoomOut": false,
+                "fullscreen": false
+            }
         },
         "style": {
             "type": "object",
