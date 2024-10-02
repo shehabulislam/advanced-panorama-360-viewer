@@ -11,29 +11,65 @@
         "html": false
     },
     "textdomain": "adv-pano-360",
-    "editorScript": "file:./../panorama-viewer.js",
-    "editorStyle": "file:./index.css",
-    "style": "file:./style-index.css",
     "attributes": {
-        "mediaUrl": {
-            "type": "string"
+        "clientId": { "type": "string", "default": "uniqueId" },
+        "scene": {
+            "type": "object",
+            "default": {
+                "title": "First Scene",
+                "panorama": "https://i.ibb.co/tHGzz1H/upload-image.png",
+                "hotSpots": []
+            }
         },
-        "showControls": {
-            "type": "boolean",
-            "default": true
+        "defaultScene": {
+        "type": "string",
+        "default": ""
         },
-        "customControls": {
-            "type": "string"
-        },
-        "isVirtualTour": {
-            "type": "boolean",
-            "default": false
-        },
-        "title": {
-            "type": "string"
-        },
-        "author": {
-            "type": "string"
+        "options": {
+            "type": "object",
+            "default": {
+                "autoLoad": true,
+                "autoRotate": 0,
+                "draggable": true,
+                "showControls": true,
+                "nextPrevBtn": false,
+                "keyboardZoom": true,
+                "mouseZoom ": true,
+                "compass": false,
+                "sceneFadeDuration": 1000,
+                "preview": "",
+                "default": {
+                "firstScene": "0"
+            }
         }
-    }
+        },
+        "controls": {
+            "type": "object",
+            "default": {}
+        },
+        "style": {
+            "type": "object",
+            "default": {
+                "height": "400px",
+                "width": "100%"
+            }
+        },
+        "css": {
+            "type": "string",
+            "default": ""
+        },
+        "additional": {
+            "type": "object",
+            "default": {
+                "Class": "",
+                "ID": "",
+                "CSS": ""
+            }
+        }
+    },
+    "editorScript": ["file:./index.js", "pannellum-2.5.6"],
+    "editorStyle": ["file:./style-index.css", "pannellum-2.5.6"],
+    "style": ["file:./style-index.css", "pannellum-2.5.6"],
+    "viewScript": ["file:./frontend.js", "pannellum-2.5.6"],
+    "render": "file:./render.php"
 }

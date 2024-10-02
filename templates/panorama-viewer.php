@@ -5,5 +5,5 @@
      data-is-virtual-tour="<?php echo esc_attr($attributes['isVirtualTour']); ?>"
      data-title="<?php echo esc_attr($attributes['title']); ?>"
      data-author="<?php echo esc_attr($attributes['author']); ?>">
-    <!-- The actual panorama viewer will be initialized by the frontend JavaScript -->
+    <!-- The actual panorama viewer will be initialized by the frontend JavaScript -->Loading...
 </div>

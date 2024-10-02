@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const viewers = document.querySelectorAll(".adv-pano-360-panorama-viewer");
-
   viewers.forEach((viewer) => {
     const attributes = JSON.parse(viewer.dataset.attributes);
     console.log("workign fine", attributes);

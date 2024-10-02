@@ -13,9 +13,7 @@ class Block {
     }
 
     public function register_block() {
-        register_block_type(ADV_PANO_360_PATH . 'build/blocks/panorama-viewer', array(
-            'render_callback' => array($this, 'render_block'),
-        ));
+        register_block_type(ADV_PANO_360_PATH . 'build/blocks/panorama-viewer');
     }
 
     public function render_block($attributes) {

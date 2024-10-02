@@ -16,6 +16,7 @@ class AdvPano360 {
         $this->define_admin_hooks();
         $this->define_public_hooks();
         $this->define_block_hooks();
+        $this->define_hooks();
     }
 
     private function load_dependencies() {
@@ -42,6 +43,11 @@ class AdvPano360 {
     private function define_block_hooks() {
         $plugin_block = new Block($this->get_plugin_name(), $this->get_version());
         $this->loader->add_action('init', $plugin_block, 'register_block');
+    }
+
+    private function define_hooks(){
+        $assets = new Assets($this->get_plugin_name(), $this->get_version());
+        $this->loader->add_action('init', $assets, 'enqueue_libraries');
     }
 
     public function run() {

@@ -4,8 +4,8 @@ const path = require("path");
 module.exports = {
   ...defaultConfig,
   entry: {
-    "blocks/panorama-viewer": path.resolve(process.cwd(), "src", "blocks", "panorama-viewer", "index.js"),
-    frontend: path.resolve(process.cwd(), "src", "frontend", "panorama-viewer.js"),
+    "blocks/panorama-viewer/index": path.resolve(process.cwd(), "src", "blocks", "panorama-viewer", "index.js"),
+    "blocks/panorama-viewer/frontend": path.resolve(process.cwd(), "src", "blocks", "panorama-viewer", "frontend.js"),
   },
   output: {
     filename: "[name].js",

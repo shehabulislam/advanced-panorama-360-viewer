@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Advanced Panorama 360 Viewer
- * Plugin URI: https://example.com/advanced-panorama-360-viewer
+ * Plugin URI: https://wpshopifyexpert.com/advanced-panorama-360-viewer
  * Description: A powerful 360 panorama viewer with Gutenberg block and Elementor addon support.
  * Version: 1.0.0
  * Author: WP Shopify Expert
- * Author URI: https://example.com
+ * Author URI: https://wpshopifyexpert.com
  * Text Domain: adv-pano-360
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
