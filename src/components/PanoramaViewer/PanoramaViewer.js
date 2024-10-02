@@ -4,7 +4,7 @@ import "./style.scss";
 
 export default function ({ attributes, viewer, setViewer }) {
   // const [viewer, setViewer] = useState(null);
-  const { options = {}, controls = {} } = attributes;
+  const { clientId, scene, options = {}, controls = {}, css } = attributes;
 
   const ref = useRef();
 
@@ -13,7 +13,8 @@ export default function ({ attributes, viewer, setViewer }) {
       ref.current.innerHTML = `<div id="controls"></div>`;
       const instance = pannellum.viewer(ref.current, {
         type: "equirectangular",
-        panorama: "https://pannellum.org/images/alma.jpg",
+        // panorama: scene.panorama,
+        scenes: [scene],
         ...options,
       });
       window.viewer = instance;
@@ -74,7 +75,8 @@ export default function ({ attributes, viewer, setViewer }) {
 
   return (
     <>
-      <div style={{ width: "100%", height: "400px" }} ref={ref}>
+      <style>{css}</style>
+      <div id={clientId} style={{ width: "100%", height: "400px" }} ref={ref}>
         <div id="controls"></div>
       </div>
     </>
