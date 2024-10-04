@@ -8,16 +8,18 @@
     "icon": "format-image",
     "description": "Display a 360-degree panorama image or video.",
     "supports": {
-        "html": false
+        "html": false,
+        "align": ["wide", "full"]
     },
-    "textdomain": "adv-pano-360",
+    "textdomain": "advanced-panorama-360-viewer",
     "attributes": {
         "clientId": { "type": "string", "default": "uniqueId" },
+        "align": { "type": "string",  "default": ""},
         "scene": {
             "type": "object",
             "default": {
                 "title": "First Scene",
-                "panorama": "https://i.ibb.co/tHGzz1H/upload-image.png",
+                "panorama": "",
                 "hotSpots": []
             }
         },
@@ -33,14 +35,14 @@
                 "draggable": true,
                 "showControls": true,
                 "nextPrevBtn": false,
-                "keyboardZoom": true,
-                "mouseZoom ": true,
+                "keyboardZoom": false,
+                "mouseZoom": false,
                 "compass": false,
                 "sceneFadeDuration": 1000,
                 "preview": "",
                 "default": {
-                "firstScene": "0"
-            }
+                    "firstScene": "0"
+                }
         }
         },
         "controls": {
@@ -76,8 +78,8 @@
         }
     },
     "editorScript": ["file:./index.js", "pannellum-2.5.6"],
-    "editorStyle": ["file:./style-index.css", "pannellum-2.5.6"],
-    "style": ["file:./style-index.css", "pannellum-2.5.6"],
-    "viewScript": ["file:./frontend.js", "pannellum-2.5.6"],
+    "editorStyle": ["file:./index.css"],
+    "style": ["file:./view.css", "pannellum-2.5.6"],
+    "viewScript": ["file:./view.js", "pannellum-2.5.6"],
     "render": "file:./render.php"
 }

@@ -2,17 +2,17 @@ import { __ } from "@wordpress/i18n";
 const { TabPanel, PanelBody, PanelRow } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
-import { useEffect, useRef } from "@wordpress/element";
+import { useEffect, useState } from "@wordpress/element";
 
 import { General } from "./tabs/General";
 import Style from "./tabs/Style";
 import tabController from "../../utils/tabController";
-import clickToCopy from "../../utils/clickToCopy";
+import { ClipboardButton } from "@wordpress/components";
 
-const Settings = ({ attributes, setAttributes, isSelected, viewer, currentScene, renderPanorama }) => {
-  const { style, additional, options, controls, basicControls, sceneFadeDuration, autoRotation } = attributes;
+const Settings = ({ attributes, setAttributes, isSelected }) => {
+  // const { style, additional, options, controls, basicControls, sceneFadeDuration, autoRotation } = attributes;
 
-  const tooltip = useRef();
+  const [hasCopied, setHasCopied] = useState(false);
 
   const postType = wp.data.select("core/editor")?.getCurrentPostType() || "product";
   const postId = wp.data.select("core/editor")?.getCurrentPostId();
@@ -23,33 +23,28 @@ const Settings = ({ attributes, setAttributes, isSelected, viewer, currentScene,
 
   return (
     <InspectorControls>
-      {postType === "panorama-lite" && (
+      {postType === "panorama-360-viewer" && (
         <PanelBody>
           <PanelRow>
-            <div className="b3dviewer_front_shortcode">
-              <input onClick={clickToCopy} value={`[panorama_lite id=${postId}]`} />
-              <span ref={tooltip} className="htooltip">
-                {__("Copy To Clipboard", "panorama-lite")}
-              </span>
-            </div>
+            <ClipboardButton variant="primary" text={`[advance_panorama_viewer id=${postId}]`} onCopy={() => setHasCopied(true)} onFinishCopy={() => setHasCopied(false)}>
+              {hasCopied ? "Copied!" : "Copy Text"}
+            </ClipboardButton>
           </PanelRow>
         </PanelBody>
       )}
       <TabPanel
-        className="panorama-lite-tab-panel"
+        className="adv-pano-360-tab-panel"
         activeClass="active"
-        onSelect={(e) => {
-          tabController();
-        }}
+        onSelect={tabController}
         tabs={[
           {
             name: "general",
-            title: __("General", "panorama-lite"),
+            title: __("General", "advanced-panorama-360-viewer"),
             className: "general",
           },
           {
             name: "style",
-            title: __("Style", "panorama-lite"),
+            title: __("Style", "advanced-panorama-360-viewer"),
             className: "style",
           },
         ]}

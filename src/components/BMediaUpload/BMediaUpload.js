@@ -1,4 +1,3 @@
-const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
 const { Button, PanelRow, TextControl } = wp.components;

@@ -19,8 +19,10 @@
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js"
   },
+  "files": ["lib", "assets", "build", "includes", "advanced-panorama-360-viewer.php", "vendor/composer", "vendor/bin", "vendor/autoload.php", "!package.json", "readme.txt"],
   "devDependencies": {
-    "@wordpress/scripts": "^26.0.0"
+    "@wordpress/scripts": "^26.0.0",
+    "eslint-webpack-plugin": "^4.2.0"
   },
   "dependencies": {
     "@wordpress/block-editor": "^11.0.0",

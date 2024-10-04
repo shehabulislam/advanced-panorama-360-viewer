@@ -2,6 +2,10 @@
 
 namespace AdvPano360;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 class Frontend {
 
     private $plugin_name;

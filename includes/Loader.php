@@ -2,14 +2,20 @@
 
 namespace AdvPano360;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 class Loader {
 
     protected $actions;
     protected $filters;
+    protected $shortcodes;
 
     public function __construct() {
         $this->actions = array();
         $this->filters = array();
+        $this->shortcodes = array();
     }
 
     public function add_action($hook, $component, $callback, $priority = 10, $accepted_args = 1) {
@@ -18,6 +24,9 @@ class Loader {
 
     public function add_filter($hook, $component, $callback, $priority = 10, $accepted_args = 1) {
         $this->filters = $this->add($this->filters, $hook, $component, $callback, $priority, $accepted_args);
+    }
+    public function add_shortcode($hook, $component, $callback, $priority = 10, $accepted_args = 1) {
+        $this->shortcodes = $this->add($this->shortcodes, $hook, $component, $callback, $priority, $accepted_args);
     }
 
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args) {
@@ -39,6 +48,9 @@ class Loader {
 
         foreach ($this->actions as $hook) {
             add_action($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
+        }
+        foreach ($this->shortcodes as $hook) {
+            add_shortcode($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
         }
     }
 }

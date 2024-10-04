@@ -1,5 +1,10 @@
 <?php
 namespace AdvPano360;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 class PostType{
     private $plugin_name;
     private $version;
@@ -54,7 +59,7 @@ class PostType{
             'has_archive'           => false,
             'hierarchical'          => false,
             'capability_type'       => 'page',
-            'rewrite'               => array( 'slug' => 'panorama-lite' ),
+            'rewrite'               => array( 'slug' => "advanced-panorama-360-viewer" ),
             'supports'              => array( 'title', 'editor' ),
             'template'              => [
                 ['adv-pano-360/panorama-viewer']

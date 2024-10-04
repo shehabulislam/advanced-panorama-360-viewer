@@ -2,6 +2,10 @@
 
 namespace AdvPano360;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 class Assets {
 
     private $plugin_name;
@@ -13,25 +17,19 @@ class Assets {
     }
 
     public function enqueue_styles() {
-        wp_enqueue_style($this->plugin_name, ADV_PANO_360_URL . 'build/css/frontend.css', array(), $this->version, 'all');
+        
     }
 
     public function enqueue_scripts() {
-        wp_enqueue_script($this->plugin_name, ADV_PANO_360_URL . 'build/js/frontend.js', array('jquery'), $this->version, true);
+        
     }
 
     public function enqueue_admin_assets() {
-        wp_enqueue_style($this->plugin_name . '-admin', ADV_PANO_360_URL . 'build/css/admin.css', array(), $this->version, 'all');
+        
     }
 
     public function enqueue_block_editor_assets() {
-        wp_enqueue_script(
-            $this->plugin_name . '-block-editor',
-            ADV_PANO_360_URL . 'build/js/blocks.js',
-            array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'),
-            $this->version,
-            true
-        );
+        
     }
 
     public function enqueue_libraries(){

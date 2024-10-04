@@ -2,6 +2,10 @@
 
 namespace AdvPano360;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 class AdvPano360 {
 
     protected $loader;
@@ -17,6 +21,7 @@ class AdvPano360 {
         $this->define_public_hooks();
         $this->define_block_hooks();
         $this->define_hooks();
+        $this->define_shortcodes();
     }
 
     private function load_dependencies() {
@@ -50,6 +55,11 @@ class AdvPano360 {
         $post_type = new PostType($this->get_plugin_name(), $this->get_version());
         $this->loader->add_action('init', $assets, 'enqueue_libraries');
         $this->loader->add_action('init', $post_type, 'register');
+    }
+
+    private function define_shortcodes(){
+        $shortcode = new Shortcode($this->get_plugin_name(), $this->get_version());
+        $this->loader->add_shortcode('advance_panorama_viewer', $shortcode, 'advance_panorama_viewer');
     }
 
     public function run() {
