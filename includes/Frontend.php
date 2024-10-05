@@ -17,10 +17,10 @@ class Frontend {
     }
 
     public function enqueue_styles() {
-        wp_enqueue_style($this->plugin_name, ADV_PANO_360_URL . 'build/css/frontend.css', array(), $this->version, 'all');
+        
     }
 
     public function enqueue_scripts() {
-        wp_enqueue_script($this->plugin_name, ADV_PANO_360_URL . 'build/js/frontend.js', array('jquery'), $this->version, true);
+        
     }
 }

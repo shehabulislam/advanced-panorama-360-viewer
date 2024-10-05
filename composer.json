@@ -16,8 +16,5 @@
         "psr-4": {
             "AdvPano360\\": "includes/"
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0"
     }
 }
