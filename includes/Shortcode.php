@@ -41,21 +41,12 @@ class Shortcode{
     
             if($post){
                 $blocks = parse_blocks($post->post_content);
-                // echo '<pre>';
-                // print_r( $blocks[0] );
-                // echo '</pre>';
                 return render_block($blocks[0]);
             }
             return 'something went wrong!';
         }
 
         $block = $this->generate_advanced_panorama_viewer_to_block($attrs);
-
-        // echo '<pre>';
-        // print_r( $block );
-        // echo '</pre>';
-        // return $block['attrs']['style']['height'];
-        // return  esc_html($attrs['height']);
 
         return render_block($block);
 

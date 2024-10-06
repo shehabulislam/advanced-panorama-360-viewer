@@ -1,7 +1,7 @@
 === Advanced Panorama 360 Viewer ===
 Contributors: wpshopifyexpert
 Donate Link: https://buymeacoffee.com/shehabulislam
-Tags: panorama, 360-degree image viewer, image viewer, Gutenberg block
+Tags: panorama, 360-degree, image viewer, Gutenberg block
 Requires at least: 5.6
 Tested up to: 6.6.2
 Stable tag: 1.0.0
