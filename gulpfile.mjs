@@ -19,7 +19,6 @@ export function bundle() {
       [
         "**/*",
         "!node_modules/**",
-        "!bplugins_sdk/src/**",
         "!src/**",
         "!zip/**",
         "!bundled/**",
@@ -37,7 +36,8 @@ export function bundle() {
       ]
       // { allowEmpty: true }
     )
-    .pipe(zip("advanced-panorama-360-viewer.zip")).pipe(gulp.dest("bundled"));
+    .pipe(zip("advanced-panorama-360-viewer.zip"))
+    .pipe(gulp.dest("bundled"));
 }
 
 // export { bundle };

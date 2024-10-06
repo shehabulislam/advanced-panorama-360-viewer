@@ -1,6 +1,7 @@
 === Advanced Panorama 360 Viewer ===
 Contributors: wpshopifyexpert
-Tags: panorama, 360-degree, image viewer, Gutenberg block
+Donate Link: https://buymeacoffee.com/shehabulislam
+Tags: panorama, 360-degree image viewer, image viewer, Gutenberg block
 Requires at least: 5.6
 Tested up to: 6.6.2
 Stable tag: 1.0.0
@@ -31,6 +32,68 @@ Advanced Panorama 360 Viewer is a powerful WordPress plugin that allows you to e
 * Education: Create interactive learning experiences for museums or historical sites
 * Events: Offer 360-degree views of venues for weddings, conferences, or exhibitions
 * Product Showcases: Display products in a 360-degree view for e-commerce sites
+
+
+== Shortcode Usage ==
+
+You can use the Advanced Panorama 360 Viewer shortcode to embed panoramas in your posts, pages, or anywhere shortcodes are supported. The basic syntax is:
+
+[advance_panorama_viewer]
+
+= Shortcode Attributes =
+
+The shortcode supports the following attributes:
+
+1. id (optional): A unique identifier for the panorama viewer.
+   Default: null
+
+2. panorama (required): The URL of the panorama image.
+   Default: null
+
+3. title (optional): The title of the panorama.
+   Default: null
+
+4. author (optional): The author or creator of the panorama.
+   Default: null
+
+5. auto_load (optional): Whether to load the panorama automatically.
+   Accepted values: "true" or "false"
+   Default: "true"
+
+6. draggable (optional): Whether the panorama can be dragged to pan around.
+   Accepted values: "true" or "false"
+   Default: "true"
+
+7. align (optional): Alignment of the panorama viewer.
+   Accepted values: "left", "center", "right"
+   Default: ""
+
+8. class_name (optional): Additional CSS class(es) for the panorama viewer container.
+   Default: null
+
+9. height (optional): The height of the panorama viewer.
+   Default: "400px"
+
+10. width (optional): The width of the panorama viewer.
+    Default: "100%"
+
+= Examples =
+
+Basic usage:
+[advance_panorama_viewer panorama="https://example.com/path/to/panorama.jpg"]
+
+With additional attributes:
+[advance_panorama_viewer panorama="https://example.com/path/to/panorama.jpg" title="Beautiful Sunset" author="John Doe" height="600px" auto_load="false"]
+
+Aligned to the right with custom class:
+[advance_panorama_viewer panorama="https://example.com/path/to/panorama.jpg" align="right" class_name="my-custom-panorama" width="80%"]
+
+= Notes =
+
+- The 'panorama' attribute is required. Without it, the viewer will not display properly.
+- Use percentage or pixel values for 'height' and 'width' attributes (e.g., "100%", "400px").
+- When using the shortcode in a page builder or custom HTML block, you may need to wrap it in a shortcode block or use the appropriate syntax for your specific editor.
+
 
 == Installation ==
 

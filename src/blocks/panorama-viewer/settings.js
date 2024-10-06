@@ -26,8 +26,14 @@ const Settings = ({ attributes, setAttributes, isSelected }) => {
       {postType === "panorama-360-viewer" && (
         <PanelBody>
           <PanelRow>
-            <ClipboardButton variant="primary" text={`[advance_panorama_viewer id=${postId}]`} onCopy={() => setHasCopied(true)} onFinishCopy={() => setHasCopied(false)}>
-              {hasCopied ? "Copied!" : "Copy Text"}
+            <ClipboardButton
+              style={{ width: "100%", justifyContent: "center" }}
+              variant="primary"
+              text={`[advance_panorama_viewer id=${postId}]`}
+              onCopy={() => setHasCopied(true)}
+              onFinishCopy={() => setHasCopied(false)}
+            >
+              {hasCopied ? "Copied!" : "Copy Shortcode"}
             </ClipboardButton>
           </PanelRow>
         </PanelBody>
