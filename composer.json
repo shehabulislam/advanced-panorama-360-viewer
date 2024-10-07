@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AdvPano360\\": "includes/"
+            "AP360V\\": "includes/"
         }
     }
 }

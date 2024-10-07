@@ -1,6 +1,6 @@
 <?php
 
-namespace AdvPano360;
+namespace AP360V;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -35,14 +35,14 @@ class Assets {
     public function enqueue_libraries(){
         wp_register_script(
             'pannellum-2.5.6',
-            ADV_PANO_360_URL . 'lib/pannellum/pannellum.js',
+            AP360V_URL . 'lib/pannellum/pannellum.js',
             array(),
             '2.5.6',
             false
         );
         wp_register_style(
             'pannellum-2.5.6',
-            ADV_PANO_360_URL . 'lib/pannellum/pannellum.css',
+            AP360V_URL . 'lib/pannellum/pannellum.css',
             array(),
             '2.5.6',
             'all'

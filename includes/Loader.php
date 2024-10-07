@@ -1,6 +1,6 @@
 <?php
 
-namespace AdvPano360;
+namespace AP360V;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

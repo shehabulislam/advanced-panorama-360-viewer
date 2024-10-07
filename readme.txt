@@ -154,6 +154,20 @@ This plugin uses the following open-source libraries:
 
 Advanced Panorama 360 Viewer does not collect or store any personal data. It functions solely to display 360-degree panoramic content on your WordPress site.
 
+## Source Code Availability
+
+To comply with WordPress.org guidelines and ensure transparency, we provide access to the uncompressed source code of our JavaScript files. This is important for the review process and for users who wish to examine or modify the code.
+
+### Accessing the Source Code
+
+The uncompressed JavaScript source files are available in the `src` folder of our plugin repository. You can find these files at:
+
+[https://github.com/shehabulislam/advanced-panorama-360-viewer/tree/main/src](https://github.com/shehabulislam/advanced-panorama-360-viewer/tree/main/src)
+
+Included in the src folder as well.
+
+We utilized an open-source library for image viewing: https://github.com/mpetroff/pannellum.
+
 = Support =
 
 For support inquiries, please visit our [support forum](https://wpshopifyexpert.com/support) or contact us at wordpress@wpshopifyexpert.com.

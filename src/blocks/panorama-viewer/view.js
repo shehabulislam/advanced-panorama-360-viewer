@@ -4,7 +4,7 @@ import { useState } from "react";
 import Style from "./Style";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const viewers = document.querySelectorAll(".wp-block-adv-pano-360-panorama-viewer");
+  const viewers = document.querySelectorAll(".wp-block-ap360v-panorama-viewer");
   viewers.forEach((viewer) => {
     const attributes = JSON.parse(viewer.dataset.attributes);
     viewer.removeAttribute("data-attributes");

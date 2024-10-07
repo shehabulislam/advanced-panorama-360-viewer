@@ -1,20 +1,20 @@
 <?php
 
-namespace AdvPano360;
+namespace AP360V;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-class AdvPano360 {
+class AP360V {
 
     protected $loader;
     protected $plugin_name;
     protected $version;
 
     public function __construct() {
-        $this->version = ADV_PANO_360_VERSION;
-        $this->plugin_name = 'adv-pano-360';
+        $this->version = AP360V_VERSION;
+        $this->plugin_name = 'ap360v';
         $this->load_dependencies();
         $this->set_locale();
         $this->define_admin_hooks();

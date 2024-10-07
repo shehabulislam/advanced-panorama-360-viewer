@@ -1,5 +1,5 @@
 <?php 
-namespace AdvPano360;
+namespace AP360V;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -57,7 +57,7 @@ class Shortcode{
         extract($attrs);
         
         return [
-            'blockName' => 'adv-pano-360/panorama-viewer',
+            'blockName' => 'ap360v/panorama-viewer',
             'attrs' => [
                 'clientId' => 'adv-pano-'.uniqid(),
                 'align' => esc_attr($align),

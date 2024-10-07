@@ -23,7 +23,7 @@ const Settings = ({ attributes, setAttributes, isSelected }) => {
 
   return (
     <InspectorControls>
-      {postType === "panorama-360-viewer" && (
+      {postType === "ap360v-viewer" && (
         <PanelBody>
           <PanelRow>
             <ClipboardButton
@@ -39,7 +39,7 @@ const Settings = ({ attributes, setAttributes, isSelected }) => {
         </PanelBody>
       )}
       <TabPanel
-        className="adv-pano-360-tab-panel"
+        className="ap360v-tab-panel"
         activeClass="active"
         onSelect={tabController}
         tabs={[

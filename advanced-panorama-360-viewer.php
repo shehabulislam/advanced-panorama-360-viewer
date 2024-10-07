@@ -21,13 +21,13 @@ if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
-define('ADV_PANO_360_VERSION', '1.0.0');
-define('ADV_PANO_360_PATH', plugin_dir_path(__FILE__));
-define('ADV_PANO_360_URL', plugin_dir_url(__FILE__));
+define('AP360V_VERSION', '1.0.0');
+define('AP360V_PATH', plugin_dir_path(__FILE__));
+define('AP360V_URL', plugin_dir_url(__FILE__));
 
 // Begins execution of the plugin
-function run_adv_pano_360() {
-    $plugin = new AdvPano360\AdvPano360();
+function ap360v_run() {
+    $plugin = new AP360V\AP360V();
     $plugin->run();
 }
-run_adv_pano_360();
+ap360v_run();

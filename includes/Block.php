@@ -1,6 +1,6 @@
 <?php
 
-namespace AdvPano360;
+namespace AP360V;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -17,6 +17,6 @@ class Block {
     }
 
     public function register_block() {
-        register_block_type(ADV_PANO_360_PATH . 'build/blocks/panorama-viewer');
+        register_block_type(AP360V_PATH . 'build/blocks/panorama-viewer');
     }
 }

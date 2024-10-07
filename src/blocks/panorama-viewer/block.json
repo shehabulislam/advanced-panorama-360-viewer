@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 2,
-    "name": "adv-pano-360/panorama-viewer",
+    "name": "ap360v/panorama-viewer",
     "version": "1.0.0",
     "title": "Advanced 360 Panorama Viewer",
     "category": "media",

@@ -1,8 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 extract($attributes );
 
 $className = $className ?? '';
-$blockClassName = 'wp-block-adv-pano-360-panorama-viewer ' . $className . ' align' . $align;
+$blockClassName = 'wp-block-ap360v-panorama-viewer ' . $className . ' align' . $align;
 
 ?>
 
